@@ -1,0 +1,16 @@
+# Ignore all *.tar.gz and *.tar files in any subdirectory
+**/*.tar.gz
+**/*.tar
+
+# Ignore *.jar and *.class files in target directories inside any subdirectory of bundles
+# Ignore target directories in any subdirectory of bundles
+bundles/**/target/
+
+# Ignore emacs ~ files
+*~
+
+build/apache-karaf-4.4.3
+**/**.jar
+
+
+**/**/host.key*
