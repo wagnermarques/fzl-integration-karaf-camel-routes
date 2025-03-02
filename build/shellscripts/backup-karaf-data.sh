@@ -1,4 +1,4 @@
 #!/bin/bash
-
-sudo rsync -va  "./../../karaf_data"  "./../../karaf_data_backup/karaf_data_$(date +%y%m%d%H%M%S)"
+dest="$1_(date+%y%m%d%H%M%S)"
+sudo rsync -va  "./../../karaf_data"  $dest
 

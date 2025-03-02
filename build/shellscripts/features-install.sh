@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# it's requires that karaf container is ruuning name fzl-apache-karaf
+# it's requires that karaf container is running with fzl-apache-karaf container name
 # change to this script dir to runs it
 
 KARAF_CONSOLE="docker exec -it fzl-apache-karaf ./bin/client "

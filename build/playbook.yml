@@ -2,34 +2,13 @@
   hosts: localhost
   gather_facts: true
   vars:
-    - KARAF_VERSION: 4.4.3
+    - KARAF_VERSION: 4.4.7
 
   tasks:
-    - name: Print current user ID
-      debug:
-        var: ansible_user_id
-
-    - name: Download Apache Karaf
-      get_url:
-        url: "https://dlcdn.apache.org/karaf/{{KARAF_VERSION}}/apache-karaf-{{KARAF_VERSION}}.tar.gz"
-        dest: "{{ playbook_dir }}/apache-karaf-{{KARAF_VERSION}}.tar.gz"
-
-    - name: Extract Apache Karaf
-      unarchive:
-        src: "{{ playbook_dir }}/apache-karaf-{{KARAF_VERSION}}.tar.gz"
-        dest: "{{ playbook_dir }}"
-        remote_src: true
-        creates: "{{ playbook_dir }}/apache-karaf-{{KARAF_VERSION}}"
-
-    - name: setup custom karaf etc configuration
-      synchronize:
-        src:  "{{ playbook_dir }}/custom_karaf_etc/etc-from-{{KARAF_VERSION}}/"
-        dest:  "{{ playbook_dir }}/../karaf_etc"
-        
-    - name: Build Docker image
+    - name: Build Karaf Docker image
       docker_image:
         name: fzl-apache-karaf
-        source: build
+        source: build        
         build:
           path: "{{ playbook_dir }}"
 
