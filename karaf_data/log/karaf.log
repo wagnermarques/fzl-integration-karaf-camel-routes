@@ -11,3 +11,182 @@ Caused by: java.lang.RuntimeException: Could not resolve mvn:org.apache.karaf.fe
 	at org.apache.karaf.main.Main.installAndStartBundles(Main.java:605)
 	... 2 more
 
+Mar 02, 2025 1:28:58 PM org.apache.karaf.main.Main launch
+INFO: Installing and starting initial bundles
+Mar 02, 2025 1:28:58 PM org.apache.karaf.main.Main main
+SEVERE: Could not launch framework
+java.lang.RuntimeException: Error installing bundle listed in startup.properties with url: mvn:org.apache.karaf.features/org.apache.karaf.features.extension/4.4.3 and startlevel: 1
+	at org.apache.karaf.main.Main.installAndStartBundles(Main.java:613)
+	at org.apache.karaf.main.Main.launch(Main.java:308)
+	at org.apache.karaf.main.Main.main(Main.java:183)
+Caused by: java.lang.RuntimeException: Could not resolve mvn:org.apache.karaf.features/org.apache.karaf.features.extension/4.4.3
+	at org.apache.karaf.main.util.SimpleMavenResolver.resolve(SimpleMavenResolver.java:59)
+	at org.apache.karaf.main.Main.installAndStartBundles(Main.java:605)
+	... 2 more
+
+Mar 02, 2025 1:43:29 PM org.apache.karaf.main.Main launch
+INFO: Installing and starting initial bundles
+Mar 02, 2025 1:43:29 PM org.apache.karaf.main.Main launch
+INFO: All initial bundles installed and set to start
+Mar 02, 2025 1:43:29 PM org.apache.karaf.main.lock.SimpleFileLock lock
+INFO: Trying to lock /opt/karaf/lock
+Mar 02, 2025 1:43:29 PM org.apache.karaf.main.lock.SimpleFileLock lock
+INFO: Lock acquired
+Mar 02, 2025 1:43:29 PM org.apache.karaf.main.Main$KarafLockCallback lockAcquired
+INFO: Lock acquired. Setting startlevel to 100
+2025-03-02T13:43:30,482 | INFO  | CM Configuration Updater (Update: pid=org.ops4j.pax.logging) | EventAdminConfigurationNotifier  | 5 - org.ops4j.pax.logging.pax-logging-log4j2 - 2.2.8 | Sending Event Admin notification (configuration successful) to org/ops4j/pax/logging/Configuration
+2025-03-02T13:43:31,749 | INFO  | activator-1-thread-2 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 | Adding features: log/[4.4.7,4.4.7],shell/[4.4.7,4.4.7],eventadmin/[4.4.7,4.4.7],instance/[4.4.7,4.4.7],service/[4.4.7,4.4.7],system/[4.4.7,4.4.7],package/[4.4.7,4.4.7],diagnostic/[4.4.7,4.4.7],bundle/[4.4.7,4.4.7],feature/[4.4.7,4.4.7],jaas/[4.4.7,4.4.7],deployer/[4.4.7,4.4.7],framework/[4.4.7,4.4.7],wrap/[2.6.16,2.6.16],kar/[4.4.7,4.4.7],ssh/[4.4.7,4.4.7],management/[4.4.7,4.4.7],config/[4.4.7,4.4.7]
+2025-03-02T13:43:32,144 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 | Changes to perform:
+2025-03-02T13:43:32,144 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   Region: root
+2025-03-02T13:43:32,145 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |     Bundles to install:
+2025-03-02T13:43:32,145 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.bouncycastle/bcpkix-jdk18on/1.78.1
+2025-03-02T13:43:32,145 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.bouncycastle/bcprov-jdk18on/1.78.1
+2025-03-02T13:43:32,146 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.bouncycastle/bcutil-jdk18on/1.78.1
+2025-03-02T13:43:32,146 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.aries.jmx/org.apache.aries.jmx.api/1.1.5
+2025-03-02T13:43:32,147 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.aries.jmx/org.apache.aries.jmx.core/1.1.8
+2025-03-02T13:43:32,147 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.aries.jmx/org.apache.aries.jmx.whiteboard/1.2.0
+2025-03-02T13:43:32,148 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.aries/org.apache.aries.util/1.1.3
+2025-03-02T13:43:32,148 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.bundle/org.apache.karaf.bundle.core/4.4.7
+2025-03-02T13:43:32,148 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.config/org.apache.karaf.config.command/4.4.7
+2025-03-02T13:43:32,148 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.features/4.4.7
+2025-03-02T13:43:32,149 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.kar/4.4.7
+2025-03-02T13:43:32,149 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.wrap/4.4.7
+2025-03-02T13:43:32,149 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.diagnostic/org.apache.karaf.diagnostic.core/4.4.7
+2025-03-02T13:43:32,150 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf/org.apache.karaf.event/4.4.7
+2025-03-02T13:43:32,150 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.features/org.apache.karaf.features.command/4.4.7
+2025-03-02T13:43:32,150 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.instance/org.apache.karaf.instance.core/4.4.7
+2025-03-02T13:43:32,151 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.command/4.4.7
+2025-03-02T13:43:32,151 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.config/4.4.7
+2025-03-02T13:43:32,151 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.modules/4.4.7
+2025-03-02T13:43:32,152 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/4.4.7
+2025-03-02T13:43:32,152 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.log/org.apache.karaf.log.core/4.4.7
+2025-03-02T13:43:32,153 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.management/org.apache.karaf.management.server/4.4.7
+2025-03-02T13:43:32,153 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.package/org.apache.karaf.package.core/4.4.7
+2025-03-02T13:43:32,153 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.service/org.apache.karaf.service.core/4.4.7
+2025-03-02T13:43:32,154 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.shell/org.apache.karaf.shell.commands/4.4.7
+2025-03-02T13:43:32,154 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.shell/org.apache.karaf.shell.core/4.4.7
+2025-03-02T13:43:32,155 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.shell/org.apache.karaf.shell.ssh/4.4.7
+2025-03-02T13:43:32,155 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.karaf.system/org.apache.karaf.system.core/4.4.7
+2025-03-02T13:43:32,155 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.sshd/sshd-osgi/2.14.0
+2025-03-02T13:43:32,156 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.sshd/sshd-scp/2.14.0
+2025-03-02T13:43:32,156 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.apache.sshd/sshd-sftp/2.14.0
+2025-03-02T13:43:32,156 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.jline/jline/3.21.0
+2025-03-02T13:43:32,157 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |       mvn:org.ops4j.pax.url/pax-url-wrap/2.6.16/jar/uber
+2025-03-02T13:43:32,160 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 | Installing bundles:
+2025-03-02T13:43:32,160 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.bouncycastle/bcpkix-jdk18on/1.78.1
+2025-03-02T13:43:32,178 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.bouncycastle/bcprov-jdk18on/1.78.1
+2025-03-02T13:43:32,210 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.bouncycastle/bcutil-jdk18on/1.78.1
+2025-03-02T13:43:32,217 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.aries.jmx/org.apache.aries.jmx.api/1.1.5
+2025-03-02T13:43:32,222 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.aries.jmx/org.apache.aries.jmx.core/1.1.8
+2025-03-02T13:43:32,226 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.aries.jmx/org.apache.aries.jmx.whiteboard/1.2.0
+2025-03-02T13:43:32,230 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.aries/org.apache.aries.util/1.1.3
+2025-03-02T13:43:32,234 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.bundle/org.apache.karaf.bundle.core/4.4.7
+2025-03-02T13:43:32,255 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.config/org.apache.karaf.config.command/4.4.7
+2025-03-02T13:43:32,260 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.features/4.4.7
+2025-03-02T13:43:32,264 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.kar/4.4.7
+2025-03-02T13:43:32,267 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.wrap/4.4.7
+2025-03-02T13:43:32,271 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.diagnostic/org.apache.karaf.diagnostic.core/4.4.7
+2025-03-02T13:43:32,275 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf/org.apache.karaf.event/4.4.7
+2025-03-02T13:43:32,279 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.features/org.apache.karaf.features.command/4.4.7
+2025-03-02T13:43:32,284 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.instance/org.apache.karaf.instance.core/4.4.7
+2025-03-02T13:43:32,290 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.command/4.4.7
+2025-03-02T13:43:32,293 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.config/4.4.7
+2025-03-02T13:43:32,296 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.modules/4.4.7
+2025-03-02T13:43:32,304 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/4.4.7
+2025-03-02T13:43:32,308 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.log/org.apache.karaf.log.core/4.4.7
+2025-03-02T13:43:32,312 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.management/org.apache.karaf.management.server/4.4.7
+2025-03-02T13:43:32,315 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.package/org.apache.karaf.package.core/4.4.7
+2025-03-02T13:43:32,319 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.service/org.apache.karaf.service.core/4.4.7
+2025-03-02T13:43:32,322 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.shell/org.apache.karaf.shell.commands/4.4.7
+2025-03-02T13:43:32,325 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.shell/org.apache.karaf.shell.core/4.4.7
+2025-03-02T13:43:32,331 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.shell/org.apache.karaf.shell.ssh/4.4.7
+2025-03-02T13:43:32,336 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.karaf.system/org.apache.karaf.system.core/4.4.7
+2025-03-02T13:43:32,340 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.sshd/sshd-osgi/2.14.0
+2025-03-02T13:43:32,353 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.sshd/sshd-scp/2.14.0
+2025-03-02T13:43:32,357 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.apache.sshd/sshd-sftp/2.14.0
+2025-03-02T13:43:32,364 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.jline/jline/3.21.0
+2025-03-02T13:43:32,371 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   mvn:org.ops4j.pax.url/pax-url-wrap/2.6.16/jar/uber
+2025-03-02T13:43:32,531 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 | Starting bundles:
+2025-03-02T13:43:32,533 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.ops4j.pax.url.wrap/2.6.16
+2025-03-02T13:43:32,541 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.aries.util/1.1.3
+2025-03-02T13:43:32,544 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.deployer.kar/4.4.7
+2025-03-02T13:43:32,550 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.deployer.wrap/4.4.7
+2025-03-02T13:43:32,558 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.deployer.features/4.4.7
+2025-03-02T13:43:32,577 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.jaas.config/4.4.7
+2025-03-02T13:43:32,587 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   bcprov/1.78.1
+2025-03-02T13:43:32,589 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   bcutil/1.78.1
+2025-03-02T13:43:32,591 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   bcpkix/1.78.1
+2025-03-02T13:43:32,592 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.sshd.osgi/2.14.0
+2025-03-02T13:43:32,594 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.sshd.scp/2.14.0
+2025-03-02T13:43:32,596 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.sshd.sftp/2.14.0
+2025-03-02T13:43:32,598 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.jline/3.21.0
+2025-03-02T13:43:32,600 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.aries.jmx.whiteboard/1.2.0
+2025-03-02T13:43:32,605 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.aries.jmx.api/1.1.5
+2025-03-02T13:43:32,607 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.shell.core/4.4.7
+2025-03-02T13:43:32,647 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.deployer.kar/4.4.7
+2025-03-02T13:43:32,651 | INFO  | features-3-thread-1 | Activator                        | 45 - org.apache.karaf.shell.core - 4.4.7 | Not starting local console. To activate set karaf.startLocalConsole=true
+2025-03-02T13:43:32,652 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.diagnostic.core/4.4.7
+2025-03-02T13:43:32,674 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.diagnostic.core/4.4.7
+2025-03-02T13:43:32,675 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.shell.commands/4.4.7
+2025-03-02T13:43:32,693 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.shell.commands/4.4.7
+2025-03-02T13:43:32,695 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Updating commands for bundle org.apache.karaf.shell.commands/4.4.7
+2025-03-02T13:43:32,697 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.log.core/4.4.7
+2025-03-02T13:43:32,712 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Command registration delayed for bundle org.apache.karaf.log.core/4.4.7. Missing service: [org.apache.karaf.log.core.LogService, org.apache.karaf.log.core.LogEventFormatter]
+2025-03-02T13:43:32,713 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.features.command/4.4.7
+2025-03-02T13:43:32,715 | INFO  | activator-1-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.log.core/4.4.7
+2025-03-02T13:43:32,734 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.features.command/4.4.7
+2025-03-02T13:43:32,736 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.kar.core/4.4.7
+2025-03-02T13:43:32,747 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.kar.core/4.4.7
+2025-03-02T13:43:32,748 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.service.core/4.4.7
+2025-03-02T13:43:32,760 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.service.core/4.4.7
+2025-03-02T13:43:32,761 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.instance.core/4.4.7
+2025-03-02T13:43:32,788 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.instance.core/4.4.7
+2025-03-02T13:43:32,790 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.config.command/4.4.7
+2025-03-02T13:43:32,799 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.config.command/4.4.7
+2025-03-02T13:43:32,830 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.jaas.modules/4.4.7
+2025-03-02T13:43:32,840 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.shell.ssh/4.4.7
+2025-03-02T13:43:32,869 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Command registration delayed for bundle org.apache.karaf.shell.ssh/4.4.7. Missing service: [org.apache.sshd.server.SshServer]
+2025-03-02T13:43:32,870 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.package.core/4.4.7
+2025-03-02T13:43:32,883 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.package.core/4.4.7
+2025-03-02T13:43:32,884 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.system.core/4.4.7
+2025-03-02T13:43:32,899 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.system.core/4.4.7
+2025-03-02T13:43:32,900 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.bundle.core/4.4.7
+2025-03-02T13:43:32,937 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.bundle.core/4.4.7
+2025-03-02T13:43:32,939 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.aries.jmx.core/1.1.8
+2025-03-02T13:43:32,945 | INFO  | features-3-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Starting JMX OSGi agent
+2025-03-02T13:43:32,964 | INFO  | features-3-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Registering MBean with ObjectName [osgi.compendium:service=cm,version=1.3,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29] for service with service.id [18]
+2025-03-02T13:43:32,968 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.management.server/4.4.7
+2025-03-02T13:43:32,977 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.jaas.command/4.4.7
+2025-03-02T13:43:32,977 | INFO  | activator-1-thread-1 | Activator                        | 41 - org.apache.karaf.management.server - 4.4.7 | Setting java.rmi.server.hostname system property to 127.0.0.1
+2025-03-02T13:43:32,996 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.jaas.command/4.4.7
+2025-03-02T13:43:32,998 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Updating commands for bundle org.apache.karaf.jaas.command/4.4.7
+2025-03-02T13:43:33,000 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Updating commands for bundle org.apache.karaf.jaas.command/4.4.7
+2025-03-02T13:43:33,002 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 |   org.apache.karaf.event/4.4.7
+2025-03-02T13:43:33,010 | INFO  | features-3-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.event/4.4.7
+2025-03-02T13:43:33,012 | INFO  | features-3-thread-1 | Activator                        | 29 - org.apache.karaf.deployer.features - 4.4.7 | Deployment finished. Registering FeatureDeploymentListener
+2025-03-02T13:43:33,048 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Registering org.osgi.jmx.framework.wiring.BundleWiringStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@436cc996 with name osgi.core:type=wiringState,version=1.1,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,050 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Registering org.osgi.jmx.service.cm.ConfigurationAdminMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@436cc996 with name osgi.compendium:service=cm,version=1.3,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,052 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Registering org.osgi.jmx.framework.FrameworkMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@436cc996 with name osgi.core:type=framework,version=1.7,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,053 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Registering org.osgi.jmx.framework.BundleStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@436cc996 with name osgi.core:type=bundleState,version=1.7,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,055 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Registering org.osgi.jmx.framework.PackageStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@436cc996 with name osgi.core:type=packageState,version=1.5,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,056 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Registering org.osgi.jmx.framework.ServiceStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@436cc996 with name osgi.core:type=serviceState,version=1.7,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,067 | INFO  | activator-1-thread-1 | BouncyCastleSecurityProviderRegistrar | 48 - org.apache.sshd.osgi - 2.14.0 | getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
+2025-03-02T13:43:33,083 | INFO  | features-3-thread-1 | FeaturesServiceImpl              | 19 - org.apache.karaf.features.core - 4.4.7 | Done.
+2025-03-02T13:43:33,118 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Unregistering org.osgi.jmx.framework.wiring.BundleWiringStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@436cc996 with name osgi.core:type=wiringState,version=1.1,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,119 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Unregistering org.osgi.jmx.service.cm.ConfigurationAdminMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@436cc996 with name osgi.compendium:service=cm,version=1.3,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,120 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Unregistering org.osgi.jmx.framework.FrameworkMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@436cc996 with name osgi.core:type=framework,version=1.7,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,122 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Unregistering org.osgi.jmx.framework.BundleStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@436cc996 with name osgi.core:type=bundleState,version=1.7,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,123 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Unregistering org.osgi.jmx.framework.PackageStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@436cc996 with name osgi.core:type=packageState,version=1.5,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,125 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Unregistering org.osgi.jmx.framework.ServiceStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@436cc996 with name osgi.core:type=serviceState,version=1.7,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,127 | WARN  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Task rejected for JMX Notification dispatch of event [org.osgi.framework.ServiceEvent[source=[javax.management.MBeanServer]]] - Dispatcher may have been shutdown
+2025-03-02T13:43:33,138 | WARN  | activator-1-thread-1 | Activator                        | 41 - org.apache.karaf.management.server - 4.4.7 | java.rmi.server.hostname system property is already set to 127.0.0.1. Apache Karaf doesn't override it
+2025-03-02T13:43:33,152 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Registering org.osgi.jmx.framework.wiring.BundleWiringStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@25498f1d with name osgi.core:type=wiringState,version=1.1,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,153 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Registering org.osgi.jmx.service.cm.ConfigurationAdminMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@25498f1d with name osgi.compendium:service=cm,version=1.3,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,154 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Registering org.osgi.jmx.framework.FrameworkMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@25498f1d with name osgi.core:type=framework,version=1.7,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,155 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Registering org.osgi.jmx.framework.BundleStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@25498f1d with name osgi.core:type=bundleState,version=1.7,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,156 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Registering org.osgi.jmx.framework.PackageStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@25498f1d with name osgi.core:type=packageState,version=1.5,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,157 | INFO  | activator-1-thread-1 | core                             | 24 - org.apache.aries.jmx.core - 1.1.8 | Registering org.osgi.jmx.framework.ServiceStateMBean to MBeanServer org.apache.karaf.management.internal.EventAdminMBeanServerWrapper@25498f1d with name osgi.core:type=serviceState,version=1.7,framework=org.apache.felix.framework,uuid=cce997ca-9f45-49a0-95e0-29f83238cf29
+2025-03-02T13:43:33,254 | INFO  | activator-1-thread-1 | CommandExtension                 | 45 - org.apache.karaf.shell.core - 4.4.7 | Registering commands for bundle org.apache.karaf.shell.ssh/4.4.7
+2025-03-02T13:43:33,265 | INFO  | activator-1-thread-1 | DefaultIoServiceFactoryFactory   | 48 - org.apache.sshd.osgi - 2.14.0 | No detected/configured IoServiceFactoryFactory; using Nio2ServiceFactoryFactory
+2025-03-02T14:00:59,786 | INFO  | sshd-SshServer[294eb5cc](port=8101)-nio2-thread-2 | OpenSSHKeyPairProvider           | 46 - org.apache.karaf.shell.ssh - 4.4.7 | Creating ssh server private key at /opt/karaf/etc/host.key
+2025-03-02T14:00:59,792 | INFO  | sshd-SshServer[294eb5cc](port=8101)-nio2-thread-2 | OpenSSHKeyPairGenerator          | 46 - org.apache.karaf.shell.ssh - 4.4.7 | generateKeyPair(RSA) generating host key - size=2048
