@@ -16,8 +16,6 @@
       docker_container:
         name: fzl-apache-karaf
         image: fzl-apache-karaf
-        env:
-          KARAF_ADMIN_PASSWORD: Admin123
         ports:
           - "8181:8181"
           - "8101:8101"
