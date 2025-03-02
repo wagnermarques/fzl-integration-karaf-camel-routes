@@ -1,0 +1,13 @@
+Mar 02, 2025 1:05:26 AM org.apache.karaf.main.Main launch
+INFO: Installing and starting initial bundles
+Mar 02, 2025 1:05:26 AM org.apache.karaf.main.Main main
+SEVERE: Could not launch framework
+java.lang.RuntimeException: Error installing bundle listed in startup.properties with url: mvn:org.apache.karaf.features/org.apache.karaf.features.extension/4.4.3 and startlevel: 1
+	at org.apache.karaf.main.Main.installAndStartBundles(Main.java:613)
+	at org.apache.karaf.main.Main.launch(Main.java:308)
+	at org.apache.karaf.main.Main.main(Main.java:183)
+Caused by: java.lang.RuntimeException: Could not resolve mvn:org.apache.karaf.features/org.apache.karaf.features.extension/4.4.3
+	at org.apache.karaf.main.util.SimpleMavenResolver.resolve(SimpleMavenResolver.java:59)
+	at org.apache.karaf.main.Main.installAndStartBundles(Main.java:605)
+	... 2 more
+
