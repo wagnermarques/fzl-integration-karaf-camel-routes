@@ -15,4 +15,4 @@ build/apache-karaf-4.4.3
 
 **/**/host.key*
 
-karaf_data/log/karaf.log
+/karaf_data
